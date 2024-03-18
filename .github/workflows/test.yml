@@ -19,6 +19,7 @@ jobs:
           - java
           - python
           - typescript
+          - typescript-mjs
           - go
           - csharp
           - ruby
@@ -70,13 +71,13 @@ jobs:
         with:
           node-version: 18
 
-      # Typescript browser setup
-      - name: Typescript browser - Setup Node
+      # Typescript mjs setup
+      - name: Typescript mjs - Setup Node
         uses: actions/setup-node@v4
-        if: matrix.language == 'typescript-browser'
+        if: matrix.language == 'typescript-mjs'
         with:
           node-version: 18
-      
+
       # Go setup
       - name: Go - Setup Go
         uses: actions/setup-go@v5
